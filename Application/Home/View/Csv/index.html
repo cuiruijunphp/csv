@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+         .level_1{list-style-type:circle;}
+         .level_2{list-style-type:none;}
+    </style>
+
+    <title>表格上传</title>
+</head>
+
+<body >
+<a href="{:U('upload')}">上传表格</a>
+<h3 ><span>选择表格进行合并生成</span></h3>
+<form action="{:U('import_do')}" method="post">
+<foreach name="list" key="k" item="v">
+    <ul class = "level_1">
+          <li>
+              {$k}
+             <ul class = "level_2">
+
+                     <foreach name="v" key="kk" item="vv">
+                       <li><input type="checkbox" name="file_name[]" value="{$k}/{$vv}">{$vv}</li>
+                     </foreach>
+
+              </ul>
+         </li>
+     </ul>
+</foreach>
+
+<input type="submit" value="选好了">
+</form>
+</div>
+</div>
+</body>
+</html>
