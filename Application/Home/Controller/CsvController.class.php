@@ -3,6 +3,9 @@ namespace Home\Controller;
 use Think\Controller;
 class CsvController extends BaseController {
 
+    /*
+     * 列表
+     */
     public function index(){
         $data['list'] = $this->loopDir2('./Public');
 
@@ -11,6 +14,9 @@ class CsvController extends BaseController {
     }
 
 
+    /*
+     * 合并/下载文件
+     */
     public function import_do(){
         $file_name_list = I('post.file_name');
 
@@ -33,8 +39,8 @@ class CsvController extends BaseController {
             array('call', 'Call'),
             array('assay_id', 'Assay Id'),
             array('well_position', 'Well Position'),
-            array('customer_name', 'Customer Name'),
             array('chip_name', 'Chip Name'),
+            array('customer_name', 'Customer Name'),
             array('dna_id', 'DNA Id'),
             array('date', 'Date'),
         );
@@ -91,10 +97,16 @@ class CsvController extends BaseController {
         $this->exportExcel('订单',$xlsCell,$company_export);
     }
 
+    /*
+     * 上传页面
+     */
     public function upload(){
         $this->display();
     }
 
+    /*
+     * 处理上传文件
+     */
     public function upload_do(){
 
         if($_FILES['file']['tmp_name']){
