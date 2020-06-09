@@ -113,7 +113,7 @@ class BaseController extends Controller {
         if($type=='xlsx'){
             $type=  'Excel2007';
         }elseif($type=='csv'){
-            $type='csv';
+            $type='CSV';
         }else{
             $type='Excel5';
         }
