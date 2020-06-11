@@ -39,8 +39,8 @@ class CsvController extends BaseController {
             array('call', 'Call'),
             array('assay_id', 'Assay Id'),
             array('well_position', 'Well Position'),
-            array('chip_name', 'Chip Name'),
             array('customer_name', 'Customer Name'),
+            array('chip_name', 'Chip Name'),
             array('dna_id', 'DNA Id'),
             array('date', 'Date'),
         );
