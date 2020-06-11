@@ -21,11 +21,11 @@
 <foreach name="list" key="k" item="v">
     <ul class = "level_1">
           <li>
-              {$k}
+              {$k}  <a href="{:U('del?ids='.$k)}">删除</a>
              <ul class = "level_2">
 
                      <foreach name="v" key="kk" item="vv">
-                       <li><input type="checkbox" name="file_name[]" value="{$k}/{$vv}">{$vv}</li>
+                       <li><input type="checkbox" name="file_name[]" value="{$k}/{$vv}">{$vv}   <a href="{:U('del?id='.$k .'_'.$vv)}">删除</a></li>
                      </foreach>
 
               </ul>
