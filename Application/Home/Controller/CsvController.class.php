@@ -53,7 +53,6 @@ class CsvController extends BaseController {
     public function import(){
 
 //        $file = './Public/2.csv';
-//        $file = './Public/1.csv';
         $file = './Public/4.csv';
         $order_list = $this->importExcel($file);
 
