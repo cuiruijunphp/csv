@@ -39,8 +39,8 @@ class CsvController extends BaseController {
             array('call', 'Call'),
             array('assay_id', 'Assay Id'),
             array('well_position', 'Well Position'),
-            array('customer_name', 'Customer Name'),
             array('chip_name', 'Chip Name'),
+            array('customer_name', 'Customer Name'),
             array('dna_id', 'DNA Id'),
             array('date', 'Date'),
         );
@@ -75,8 +75,8 @@ class CsvController extends BaseController {
                     'call' => $v[1],
                     'assay_id' => $v[2],
                     'well_position' => $v[3],
-                    'customer_name' => $customer_name,
                     'chip_name' => $chip_name,
+                    'customer_name' => $customer_name,
                     'dna_id' => explode('-', $v[0])[0],
                     'date' => $date,
                 ];
@@ -88,8 +88,8 @@ class CsvController extends BaseController {
             array('call', 'Call'),
             array('assay_id', 'Assay Id'),
             array('well_position', 'Well Position'),
-            array('customer_name', 'Customer Name'),
             array('chip_name', 'Chip Name'),
+            array('customer_name', 'Customer Name'),
             array('dna_id', 'DNA Id'),
             array('date', 'Date'),
         );
